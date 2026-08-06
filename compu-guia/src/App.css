@@ -102,8 +102,12 @@ body, html, #root {
 }
 
 .TituloComponentes {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 310px;
   color: #000;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .ContenedorComponentes {
@@ -138,13 +142,44 @@ body, html, #root {
 }
 
 .TarjetaComponente {
+  position: relative;
   display: flex;
-  flex-direction: column;  
-  border: 2px solid #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddfdf7;  
   border-radius: 10px;
   padding: 10px;
   width: 250px;
   height: 80px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.TarjetaComponente::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 3px; 
+  background: linear-gradient(270deg, #00e1ff, #2870db, #16cfb7, #00e1ff);
+  background-size: 600% 600%; 
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+  animation: cicloBorde 6s linear infinite; 
+}
+
+@keyframes cicloBorde {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .SuperiorTarjeta {
@@ -154,21 +189,43 @@ body, html, #root {
   gap: 20px;
 }
 
+/* Inicio Texto Tarjeta */
+
 .TextoTarjeta {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   
+  align-items: flex-start;  
 }
+
+.NombreComponente {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;      
+}
+
+.DescripcionComponente {
+  font-size: 12px;
+  color: #000;              
+  margin: 0;                
+  text-align: left;         
+}
+
+/* Fin Texto Tarjeta */
+
+/* Inicio Icono Componente */
 
 .IconoComponente {
   width: 60px;
   height: auto;
 }
 
-.NombreComponente {
-  font-size: 18px;
-  font-weight: bold;
+.IconoGPU {
+  width: 100px;
+  height: auto;
 }
 
-.DescripcionComponente {
-  margin-top: 0px;
+.IconoFuente {
+  width: 80px;
+  height: auto;
 }
+/* Fin Icono Componente */

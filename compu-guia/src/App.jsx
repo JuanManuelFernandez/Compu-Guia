@@ -47,27 +47,67 @@ function App() {
               </div>
             </button>
 
-            <div className="TarjetaComponente">
-              <span>GPU</span>
-            </div>
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoGPU" src='src/assets/Componentes/GPU.png' alt="GPU"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">GPU</span>
+                    <p className="DescripcionComponente">Gráficos y visuales</p>
+                  </div>
+                </div>
+              </div>
+            </button>
 
-            <div className="TarjetaComponente">
-              <span>RAM</span>
-            </div>
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoComponente" src='src/assets/Componentes/RAM.png' alt="RAM"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">RAM</span>
+                    <p className="DescripcionComponente">Memoria de acceso aleatorio</p>
+                  </div>
+                </div>
+              </div>
+            </button>
           </div>
 
           <div className="Fila2">
-            <div className="TarjetaComponente">
-              <span>Placa base</span>
-            </div>
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoComponente" src='src/assets/Componentes/MOTHER.png' alt="MOTHER"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">Placa madre</span>
+                    <p className="DescripcionComponente">La placa principal de <br></br>la computadora</p>
+                  </div>
+                </div>
+              </div>
+            </button>
 
-            <div className="TarjetaComponente">
-              <span>Almacenamiento</span>
-            </div>
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoComponente" src='src/assets/Componentes/SSD.png' alt="SSD"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">Almacenamiento</span>
+                    <p className="DescripcionComponente">Almacenamiento de datos</p>
+                  </div>
+                </div>
+              </div>
+            </button>
 
-            <div className="TarjetaComponente">
-              <span>Fuente de poder</span>
-            </div>
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoFuente" src='src/assets/Componentes/FUENTE.png' alt="FUENTE"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">Fuente de poder</span>
+                    <p className="DescripcionComponente">Suministra energía <br></br>a la computadora</p>
+                  </div>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </section>
