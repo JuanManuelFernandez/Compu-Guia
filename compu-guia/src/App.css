@@ -4,6 +4,7 @@ body, html, #root {
   height: 100vh;
   padding: 0;
   margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .Superior {
@@ -41,6 +42,7 @@ body, html, #root {
   margin-right: 10px;
 }
 
+
 .BtnNav {
   background-color: transparent;
   font-size: 15px;
@@ -51,6 +53,8 @@ body, html, #root {
 }
 
 .BtnNav:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
   background-color: #cfd5df;
 }
 
@@ -105,9 +109,10 @@ body, html, #root {
   display: flex;
   justify-content: center;
   position: relative;
-  right: 310px;
+  right: 295px;
   color: #000;
   font-size: 22px;
+  font-weight: bold;
 }
 
 .ContenedorComponentes {
@@ -147,7 +152,7 @@ body, html, #root {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ddfdf7;  
+  background-color: #e5fdf9;  
   border-radius: 10px;
   padding: 10px;
   width: 250px;
