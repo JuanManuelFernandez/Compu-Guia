@@ -25,10 +25,51 @@ function App() {
           </div>
           
           <div className="ColumnaDer">
-            <img className="ImgPC" src='src/assets/PC.png' alt="PC"></img>
+            <img className="ImgPC" src='src/assets/PC2.png' alt="PC"></img>
           </div>
         </div>
+      </section>
 
+      <section className="Central">
+        <h2 className="TituloComponentes">Selecciona un componente</h2>
+
+        <div className="ContenedorComponentes">
+          <div className="Fila1">
+            <button className="BtnComponente">
+              <div className="TarjetaComponente">
+                <div className="SuperiorTarjeta">
+                  <img className="IconoComponente" src='src/assets/Componentes/CPU.png' alt="CPU"></img>
+                  <div className="TextoTarjeta">
+                    <span className="NombreComponente">CPU</span>
+                    <p className="DescripcionComponente">El cerebro de tu computadora</p>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <div className="TarjetaComponente">
+              <span>GPU</span>
+            </div>
+
+            <div className="TarjetaComponente">
+              <span>RAM</span>
+            </div>
+          </div>
+
+          <div className="Fila2">
+            <div className="TarjetaComponente">
+              <span>Placa base</span>
+            </div>
+
+            <div className="TarjetaComponente">
+              <span>Almacenamiento</span>
+            </div>
+
+            <div className="TarjetaComponente">
+              <span>Fuente de poder</span>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   )
