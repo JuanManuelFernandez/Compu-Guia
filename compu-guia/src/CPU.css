@@ -3,3 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
+
+.ContenedorModelo {
+    margin-top: 50px;
+    height: 800px;
+    width: auto;
+}
