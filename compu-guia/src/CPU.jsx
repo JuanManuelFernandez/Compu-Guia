@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei';
 import './CPU.css';
 
 function CPUModel() {
-  const { scene } = useGLTF('/Modelos/GPU.glb'); 
+  const { scene } = useGLTF('/Modelos/CPU.glb'); 
   return (
     <primitive 
       object={scene} 
@@ -32,10 +32,13 @@ function CPU() {
 
                 <div className="ContenedorSuperiorCPU">
                     <h1>CPU</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum fugit aliquam error eum ea beatae omnis sapiente quo facere! Cum fugit iure fugiat rerum natus totam provident veniam, qui ratione.</p>
+                    <p className='Explicacion'>La Unidad Central de Procesamiento es conocido como el cerebro de la computadora.
+                        Su función principal es interpretar y ejecutar las instrucciones de los programas y del sistema operativo. 
+                        Cada vez que abrís una aplicación, jugás un videojuego o navegás por internet, 
+                        el CPU procesa millones de operaciones por segundo para que todo funcione de manera fluida.</p>
                 </div>
 
-                <div className='ContenedorModelo'>
+                <div className='ContenedorModeloCPU'>
                 <Canvas camera={{ position: [0, 10, 0], fov: 20 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />

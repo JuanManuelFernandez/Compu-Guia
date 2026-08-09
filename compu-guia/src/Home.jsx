@@ -49,7 +49,7 @@ function Home() {
               </div>
             </button>
 
-            <button className="BtnComponente">
+            <button className="BtnComponente" onClick={() => navigate('/src/GPU')}>
               <div className="TarjetaComponente">
                 <div className="SuperiorTarjeta">
                   <img className="IconoGPU" src='src/assets/Componentes/GPU.png' alt="GPU"></img>
