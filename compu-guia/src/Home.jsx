@@ -75,7 +75,7 @@ function Home() {
           </div>
 
           <div className="Fila2">
-            <button className="BtnComponente">
+            <button className="BtnComponente" onClick={() => navigate('/src/MOTHER')}>
               <div className="TarjetaComponente">
                 <div className="SuperiorTarjeta">
                   <img className="IconoComponente" src='src/assets/Componentes/MOTHER.png' alt="MOTHER"></img>
