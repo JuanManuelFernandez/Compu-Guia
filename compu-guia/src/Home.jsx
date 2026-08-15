@@ -61,7 +61,7 @@ function Home() {
               </div>
             </button>
 
-            <button className="BtnComponente">
+            <button className="BtnComponente" onClick={() => navigate('/src/RAM')}>
               <div className="TarjetaComponente">
                 <div className="SuperiorTarjeta">
                   <img className="IconoComponente" src='src/assets/Componentes/RAM.png' alt="RAM"></img>
