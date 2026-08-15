@@ -1,18 +1,28 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
+import { useEffect } from 'react';
+import { Box3, Vector3 } from 'three';
 import './CPU.css';
 
 function CPUModel() {
-  const { scene } = useGLTF('/Modelos/CPU.glb'); 
-  return (
-    <primitive 
-      object={scene} 
-      scale={0.5} 
-      position={[0, -0.5, 0]} 
-      rotation={[0, Math.PI, 0, 0]}
-    />
-  );
+    const { scene } = useGLTF('/Modelos/CPU.glb');
+
+    useEffect(() => {
+        const box = new Box3().setFromObject(scene);
+        const center = box.getCenter(new Vector3());
+
+        scene.position.sub(center);
+    }, [scene]);
+
+    return (
+        <primitive
+            object={scene}
+            scale={0.5}
+            position={[0, 0, 0]}
+            rotation={[0, Math.PI, 0, 0]}
+        />
+    );
 }
 
 function CPU() {
@@ -39,7 +49,7 @@ function CPU() {
                 </div>
 
                 <div className='ContenedorModeloCPU'>
-                <Canvas camera={{ position: [0, 10, 0], fov: 20 }}>
+                <Canvas camera={{ position: [0, 10, 0], fov: 15 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <CPUModel />

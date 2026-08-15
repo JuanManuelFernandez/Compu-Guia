@@ -36,7 +36,7 @@ function GPU() {
                 </div>
 
                 <div className='ContenedorModeloGPU'>
-                <Canvas camera={{ position: [0, 0, 5], fov: 30 }}>
+                <Canvas camera={{ position: [0, 0, 10], fov: 15 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <GPUModel />
