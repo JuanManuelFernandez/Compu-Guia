@@ -5,6 +5,7 @@ import CPU from './CPU.jsx';
 import GPU from './GPU.jsx';
 import RAM from './RAM.jsx'
 import MOTHER from './MOTHER.jsx'
+import SSD from './SSD.jsx'
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="src/GPU" element={<GPU />} />
       <Route path="src/RAM" element={<RAM />} />
       <Route path="src/MOTHER" element={<MOTHER />} />
+      <Route path="src/SSD" element={<SSD />} />
     </Routes>
   );
 }

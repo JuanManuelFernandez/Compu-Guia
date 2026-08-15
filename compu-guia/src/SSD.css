@@ -1,4 +1,4 @@
-.ContenedorSuperiorMother {
+.ContenedorSuperiorSSD {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
     width: 800px;
 }
 
-.ContenedorModeloMother {
-    height: 1000px;
+.ContenedorModeloSSD {
+    height: 800px;
     width: auto;
 }

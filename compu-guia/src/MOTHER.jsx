@@ -9,7 +9,7 @@ function MotherModel() {
     <primitive 
       object={scene} 
       scale={0.5} 
-      position={[0.5, 0.3, 0]}
+      position={[0.5, 0.1, 0]}
       rotation={[0, Math.PI, 0, 0]}
     />
   );
@@ -32,16 +32,13 @@ function MOTHER() {
 
                 <div className="ContenedorSuperiorMother">
                     <h1>Placa Madre</h1>
-                    <p className='Explicacion'>La Memoria de Acceso Aleatorio es el componente encargado de almacenar de manera temporal los datos y programas que la computadora está utilizando en ese momento.
-                        A diferencia del disco duro o SSD, no guarda información de forma permanente: su contenido se borra cuando apagás la PC.
+                    <p className='Explicacion'>La Placa Madre es el componente principal de la computadora, ya que conecta y permite la comunicación entre todos los demás dispositivos: CPU, RAM, GPU, almacenamiento y periféricos.
+                        Funciona como una gran plataforma donde se integran los circuitos y conectores que hacen posible que cada pieza trabaje en conjunto.
                     </p>
-
-                    <p className='Explicacion'>Gracias a la misma, el sistema puede acceder rápidamente a la información que necesita, lo que permite que las aplicaciones se ejecuten de manera fluida y que puedas trabajar con varios programas abiertos al mismo tiempo.</p>
-
                 </div>
 
                 <div className='ContenedorModeloMother'>
-                <Canvas camera={{ position: [0, 0, 5], fov: 25 }}>
+                <Canvas camera={{ position: [0, 0, 10], fov: 15 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <MotherModel />
