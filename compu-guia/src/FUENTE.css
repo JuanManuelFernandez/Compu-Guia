@@ -1,4 +1,4 @@
-.ContenedorSuperiorGPU {
+.ContenedorSuperiorFUENTE {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
     width: 800px;
 }
 
-.ContenedorModeloGPU {
-    height: 600px;
+.ContenedorModeloFUENTE {
+    height: 800px;
     width: auto;
 }

@@ -29,22 +29,22 @@ function GPU() {
                         </div>
                     </navbar>
                 </div>
-
                 <div className="ContenedorSuperiorGPU">
                     <h1>GPU</h1>
                     <p className='Explicacion'>La Unidad de Procesamiento Gráfico es el componente encargado de procesar y renderizar imágenes, videos y animaciones en la computadora. Su función principal es liberar a la CPU de las tareas gráficas más complejas, permitiendo un mejor rendimiento general del sistema.</p>
                 </div>
+            </section>
 
-                <div className='ContenedorModeloGPU'>
-                <Canvas camera={{ position: [0, 0, 10], fov: 15 }}>
+                
+            <div className='ContenedorModeloGPU'>
+                <Canvas camera={{ position: [0, 0, 10], fov: 10 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <GPUModel />
                     <OrbitControls enableZoom={false}/>
                     <Environment preset="city" />
                 </Canvas>
-                </div>
-            </section>
+            </div>
         </>
     )
 }

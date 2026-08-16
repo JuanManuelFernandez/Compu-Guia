@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import {useState} from 'react';
-import './App.css'
+import './Home.css'
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -99,12 +99,12 @@ function Home() {
               </div>
             </button>
 
-            <button className="BtnComponente">
+            <button className="BtnComponente" onClick={() => navigate('/src/FUENTE')}>
               <div className="TarjetaComponente">
                 <div className="SuperiorTarjeta">
                   <img className="IconoFuente" src='src/assets/Componentes/FUENTE.png' alt="FUENTE"></img>
                   <div className="TextoTarjeta">
-                    <span className="NombreComponente">Fuente de poder</span>
+                    <span className="NombreComponente">Fuente de Poder</span>
                     <p className="DescripcionComponente">Suministra energía <br></br>a la computadora</p>
                   </div>
                 </div>
