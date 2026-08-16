@@ -9,7 +9,7 @@ function MotherModel() {
     <primitive 
       object={scene} 
       scale={0.5} 
-      position={[0.5, 0.1, 0]}
+      position={[0.5, 0.2, 0]}
       rotation={[0, Math.PI, 0, 0]}
     />
   );
@@ -36,17 +36,17 @@ function MOTHER() {
                         Funciona como una gran plataforma donde se integran los circuitos y conectores que hacen posible que cada pieza trabaje en conjunto.
                     </p>
                 </div>
+            </section>
 
-                <div className='ContenedorModeloMother'>
-                <Canvas camera={{ position: [0, 0, 10], fov: 15 }}>
+            <div className='ContenedorModeloMother'>
+                <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <MotherModel />
                     <OrbitControls enableZoom={false}/>
                     <Environment preset="city" />
                 </Canvas>
-                </div>
-            </section>
+            </div>
         </>
     )
 }
