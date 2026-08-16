@@ -11,15 +11,15 @@ function RamModel() {
     useEffect(() => {
         const box = new Box3().setFromObject(scene);
         const center = box.getCenter(new Vector3());
-
         scene.position.sub(center);
+
+        scene.position.y += 1;
     }, [scene]);
 
     return (
         <primitive
             object={scene}
             scale={0.5}
-            position={[0, 0, 0]}
             rotation={[0, Math.PI, 0, 0]}
         />
     );
@@ -48,19 +48,18 @@ function RAM() {
                     </p>
 
                     <p className='Explicacion'>Gracias a la misma, el sistema puede acceder rápidamente a la información que necesita, lo que permite que las aplicaciones se ejecuten de manera fluida y que puedas trabajar con varios programas abiertos al mismo tiempo.</p>
-
                 </div>
+            </section>
 
-                <div className='ContenedorModeloRam'>
-                <Canvas camera={{ position: [0, 0, 10], fov: 15 }}>
+            <div className='ContenedorModeloRam'>
+                <Canvas camera={{ position: [0, 5, 10], fov: 15 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <RamModel />
-                    <OrbitControls enableZoom={false}/>
+                    <OrbitControls enableZoom={false} target={[0, 1, 0]}/>
                     <Environment preset="city" />
                 </Canvas>
-                </div>
-            </section>
+            </div>
         </>
     )
 }
