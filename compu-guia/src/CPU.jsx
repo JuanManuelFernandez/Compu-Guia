@@ -39,25 +39,26 @@ function CPU() {
                         </div>
                     </navbar>
                 </div>
-
                 <div className="ContenedorSuperiorCPU">
                     <h1>CPU</h1>
                     <p className='Explicacion'>La Unidad Central de Procesamiento es conocido como el cerebro de la computadora.
                         Su función principal es interpretar y ejecutar las instrucciones de los programas y del sistema operativo. 
-                        Cada vez que abrís una aplicación, jugás un videojuego o navegás por internet, 
-                        el CPU procesa millones de operaciones por segundo para que todo funcione de manera fluida.</p>
-                </div>
-
-                <div className='ContenedorModeloCPU'>
-                    <Canvas camera={{ position: [0, 10, 0], fov: 15 }}>
-                        <ambientLight intensity={0.5} />
-                        <pointLight position={[10, 10, 10]} />
-                        <CPUModel />
-                        <OrbitControls enableZoom={false}/>
-                        <Environment preset="city" />
-                    </Canvas>
+                        Cada vez que se abre una aplicación, 
+                        el CPU procesa millones de operaciones por segundo para que todo funcione de manera fluida.
+                    </p>
                 </div>
             </section>
+
+
+            <div className='ContenedorModeloCPU'>
+                <Canvas camera={{ position: [0, 10, 0], fov: 15 }}>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} />
+                    <CPUModel />
+                    <OrbitControls enableZoom={false}/>
+                    <Environment preset="city" />
+                </Canvas>
+            </div>
         </>
     )
 }
