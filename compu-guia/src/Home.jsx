@@ -1,10 +1,20 @@
-import { useNavigate } from 'react-router-dom';
-import {useState} from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import {useState, useEffect} from 'react';
 import './Home.css'
 
 function Home() {
   const [count, setCount] = useState(0)
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+      if(el) {
+        el.scrollIntoView({ behavior: 'smooth'});
+      }
+    }
+  }, [location]);
 
   return (
     <>
