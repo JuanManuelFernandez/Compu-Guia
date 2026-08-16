@@ -11,15 +11,15 @@ function FUENTEModel() {
     useEffect(() => {
         const box = new Box3().setFromObject(scene);
         const center = box.getCenter(new Vector3());
-
         scene.position.sub(center);
+
+        scene.position.y += 0;
     }, [scene]);
 
     return (
         <primitive
             object={scene}
             scale={0.5}
-            position={[0, 0, 0]}
             rotation={[0, Math.PI, 0, 0]}
         />
     );
@@ -41,22 +41,24 @@ function FUENTE() {
                 </div>
 
                 <div className="ContenedorSuperiorFUENTE">
-                    <h1>Placa Madre</h1>
-                    <p className='Explicacion'>La Placa Madre es el componente principal de la computadora, ya que conecta y permite la comunicación entre todos los demás dispositivos: CPU, RAM, GPU, almacenamiento y periféricos.
-                        Funciona como una gran plataforma donde se integran los circuitos y conectores que hacen posible que cada pieza trabaje en conjunto.
+                    <h1>Fuente de Poder</h1>
+                    <p className='Explicacion'>
+                        La fuente de poder (PSU) es el componente encargado de suministrar energía eléctrica a todos los demas componentes de la computadora.
+                        Convierte la corriente alterna de la red eléctrica en corriente continua, que es la que necesitan los circuitos internos de la PC para funcionar de manera estable y segura.
                     </p>
                 </div>
+            </section>
 
-                <div className='ContenedorModeloFUENTE'>
-                <Canvas camera={{ position: [0, 0, 10], fov: 20 }}>
+
+            <div className='ContenedorModeloFUENTE'>
+                <Canvas camera={{ position: [5, 5, 5], fov: 15 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <FUENTEModel />
-                    <OrbitControls enableZoom={false}/>
+                    <OrbitControls enableZoom={false} position={[0, 0, 0]}/>
                     <Environment preset="city" />
                 </Canvas>
-                </div>
-            </section>
+            </div>
         </>
     )
 }
