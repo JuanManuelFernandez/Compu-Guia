@@ -13,14 +13,14 @@ function Home() {
           <navbar className="NavBar">
             <img className="Icono" src='src/assets/Icono.png' alt="Icono"></img>
             <div className='ContenedorBtns'>
-              <button className='BtnNav'>Inicio</button>
-              <button className='BtnNav'>Componentes</button>
-              <button className='BtnNav'>Guía</button>
+              <button className='BtnNav' onClick={() => document.getElementById('inicio').scrollIntoView({ behavior: 'smooth'})}>Inicio</button>
+              <button className='BtnNav' onClick={() => document.getElementById('componentes').scrollIntoView({ behavior: 'smooth'})}>Componentes</button>
+              <button className='BtnNav' onClick={() => document.getElementById('guia').scrollIntoView({ behavior: 'smooth'})}>Guía</button>
             </div>
           </navbar>
         </div>
 
-        <div className="ContenedorSuperior">
+        <div className="ContenedorSuperior" id='inicio'>
           <div className="ColumnaIzq">
             <h1 className="Titulo">EXPLORA EL MUNDO DE LOS <br></br> COMPONENTES DE TU PC</h1>
             <span className="Subtitulo">Descubre qué hace cada pieza escencial de tu computadora</span>
@@ -32,7 +32,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="Central">
+      <section className="Central" id='componentes'>
         <h2 className="TituloComponentes">Selecciona un componente</h2>
 
         <div className="ContenedorComponentes">
@@ -110,6 +110,27 @@ function Home() {
                 </div>
               </div>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className='Inferior'>
+        <div className='ContenedorGuia' id='guia'>
+          <h2 className='TituloGuia'>Guia</h2>
+
+          <div className='ContenedorTextoGuia'>
+            <p className='TextoGuia'>
+              En esta página encontraras todos los componentes escenciales que se necesitan para armar una computadora (PC). 
+              <br></br>
+              <br></br>
+              En la sección de componentes podras clickear en cada uno de ellos llevandote a una pestaña distinta en donde tendras:
+              <br></br>
+              <br></br>
+              - Descripción del componente.
+              <br></br>
+              <br></br>
+              - Modelo 3D para observar el componente a detalle.
+            </p>
           </div>
         </div>
       </section>
