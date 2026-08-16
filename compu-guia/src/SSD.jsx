@@ -13,13 +13,14 @@ function SSDModel() {
         const center = box.getCenter(new Vector3());
 
         scene.position.sub(center);
+        
+        scene.position.y += 2.5;
     }, [scene]);
 
     return (
         <primitive
             object={scene}
             scale={0.5}
-            position={[0, 0, 0]}
             rotation={[0, Math.PI, 0]}
         />
     );
@@ -48,17 +49,18 @@ function SSD() {
 
                     <p className='Explicacion'>A diferencia de la RAM, que borra su contenido al apagar la PC, el almacenamiento conserva la información incluso cuando la computadora está apagada.</p>
                 </div>
+            </section>
 
-                <div className='ContenedorModeloSSD'>
+
+            <div className='ContenedorModeloSSD'>
                 <Canvas camera={{ position: [5, 10, 0], fov: 10 }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[10, 10, 10]} />
                     <SSDModel />
-                    <OrbitControls enableZoom={false}/>
+                    <OrbitControls enableZoom={false} target={[0, 2.5, 0]}/>
                     <Environment preset="city" />
                 </Canvas>
-                </div>
-            </section>
+            </div>
         </>
     )
 }
