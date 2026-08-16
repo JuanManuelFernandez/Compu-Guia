@@ -3,6 +3,7 @@ import { OrbitControls, Environment } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
 import { useEffect } from 'react';
 import { Box3, Vector3 } from 'three';
+import { useNavigate } from 'react-router-dom';
 import './FUENTE.css';
 
 function FUENTEModel() {
@@ -26,6 +27,7 @@ function FUENTEModel() {
 }
 
 function FUENTE() {
+    const navigate = useNavigate();
     return (
         <>
             <section className="Superior">
@@ -33,9 +35,9 @@ function FUENTE() {
                     <navbar className="NavBar">
                         <img className="Icono" src='src/assets/Icono.png' alt="Icono"></img>
                         <div className='ContenedorBtns'>
-                        <button className='BtnNav'>Inicio</button>
-                        <button className='BtnNav'>Componentes</button>
-                        <button className='BtnNav'>Guía</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'inicio'}})}>Inicio</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'componentes'}})}>Componentes</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'guia'}})}>Guía</button>
                         </div>
                     </navbar>
                 </div>

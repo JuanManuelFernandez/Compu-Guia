@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
+import { useNavigate } from 'react-router-dom';
 import './GPU.css';
 
 function GPUModel() {
@@ -16,6 +17,8 @@ function GPUModel() {
 }
 
 function GPU() {
+    const navigate = useNavigate();
+
     return (
         <>
             <section className="Superior">
@@ -23,9 +26,9 @@ function GPU() {
                     <navbar className="NavBar">
                         <img className="Icono" src='src/assets/Icono.png' alt="Icono"></img>
                         <div className='ContenedorBtns'>
-                        <button className='BtnNav'>Inicio</button>
-                        <button className='BtnNav'>Componentes</button>
-                        <button className='BtnNav'>Guía</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'inicio'}})}>Inicio</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'componentes'}})}>Componentes</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'guia'}})}>Guía</button>
                         </div>
                     </navbar>
                 </div>

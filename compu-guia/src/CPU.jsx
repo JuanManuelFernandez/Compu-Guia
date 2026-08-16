@@ -36,7 +36,7 @@ function CPU() {
                     <navbar className="NavBar">
                         <img className="Icono" src='src/assets/Icono.png' alt="Icono"></img>
                         <div className='ContenedorBtns'>
-                            <button className='BtnNav' onClick={() => navigate('/')}>Inicio</button>
+                            <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'inicio'}})}>Inicio</button>
                             <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'componentes'}})}>Componentes</button>
                             <button className='BtnNav' onClick={() => navigate('/', { state: { scrollTo: 'guia'}})}>Guía</button>
                         </div>
